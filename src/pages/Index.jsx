@@ -1,4 +1,4 @@
-import { Container, Text, VStack, Heading, Box, Button } from "@chakra-ui/react";
+import { Container, Text, VStack, Heading, Box, Button, Flex, Spacer } from "@chakra-ui/react";
 
 const Index = () => {
   return (
@@ -10,8 +10,22 @@ const Index = () => {
           <Button colorScheme="teal" size="lg" mt={4}>Get Started</Button>
         </Box>
       </VStack>
+      <Spacer />
+      <Footer />
     </Container>
   );
 };
+
+const Footer = () => (
+  <Box as="footer" py={4} bg="gray.700" color="white" width="100%">
+    <Container maxW="container.md">
+      <Flex justify="space-between" align="center">
+        <Text>&copy; {new Date().getFullYear()} Invoicing Software. All rights reserved.</Text>
+        <Spacer />
+        <Text>Contact Us</Text>
+      </Flex>
+    </Container>
+  </Box>
+);
 
 export default Index;
